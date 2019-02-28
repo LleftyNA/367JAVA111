@@ -5,6 +5,7 @@ abstract class GameObject {
   float hp;
   float w,h;
   float cx,cy;
+  float dx,dy;
   GameObject(){
   
   }

@@ -4,7 +4,7 @@ class Enemy extends GameObject{
       cx = incomeX;
       cy = incomeY;
       pos = new PVector (cx,cy);
-      vel = new PVector (0,3);
+      vel = new PVector (0,4);
       hp = 3;
   }
 
@@ -22,8 +22,14 @@ class Enemy extends GameObject{
   while (i < engine.size()){
     GameObject thing = engine.get(i);
     if(thing instanceof Bullet){
-      if(collision(pos.x,pos.y,w,h,thing.pos.x,thing.pos.y,thing.w,thing.h)){
+      if(collision(pos.x - 25,pos.y,w,h,thing.pos.x,thing.pos.y,thing.w,thing.h)){
         hp = hp -1;
+        thing.hp = 0;
+        for (int j = 0; j < 4; j++){
+          engine.add(new Particle(thing.pos.x, thing.pos.y));
+        }
+
+
     }
     }
     i++;

@@ -23,10 +23,13 @@ class Launcher extends GameObject{
       straightLine(400);
     }
      else if (frameCount < 1500){
-       randomWave();
+       randomWave(50);
      }
      else if (frameCount % 800 ==0){
        engine.add(new Boss(pos.x, pos.y));
+     }
+     else if (frameCount < 10000) {
+        randomWave(20);
      }
   }
   
@@ -37,13 +40,15 @@ class Launcher extends GameObject{
     }
   }
   
-  void randomWave (){
+  void randomWave (float n){
     pos.x = random(50, width-50);
-    if(frameCount % 50 ==0){
+    if(frameCount % n ==0){
       engine.add(new Enemy(pos.x,pos.y));
     
     }
   }
+  
+
   boolean hasDied(){
     return false;
   }

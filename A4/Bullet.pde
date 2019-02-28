@@ -21,6 +21,6 @@ class Bullet extends GameObject{
   
 
   boolean hasDied(){
-    return pos.y < 0;
+    return pos.y < 0 || hp <= 0;
   }
 }
