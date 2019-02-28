@@ -2,12 +2,17 @@ ArrayList<GameObject> engine;
 boolean w, a, s, d, j;
 Ship myShip;
 
+color lb = #67D4FF;
+color db = #2F6A96;
+color or = #EE7036;
+
 void setup(){
   size(600, 600, FX2D);
   engine = new ArrayList<GameObject>(10000);
   rectMode(CENTER);
   myShip = new Ship();
   engine.add(myShip);
+  engine.add(new Launcher());
 }
 
 void draw(){

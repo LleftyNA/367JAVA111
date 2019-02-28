@@ -1,6 +1,7 @@
 abstract class GameObject {
   PVector pos;
   PVector vel;
+  PVector curpos;
   GameObject(){
   
   }

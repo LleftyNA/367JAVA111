@@ -23,14 +23,20 @@ class Ship extends GameObject{
     else if (d){
       vel.x = 5;
     }
-    else if (j){
-      engine.add(new Bullet());
-    }
     else{
       vel.x =0;
       vel.y = 0;
     }
+    if (j && frameCount % 10 == 0){
+      engine.add(new Bullet());
+    }
+    
     pos.add(vel);
+  }
+  
+  PVector getPos(){
+    curpos = new PVector(pos.x,pos.y);
+    return curpos;
   }
   
   boolean hasDied(){

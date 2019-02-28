@@ -1,7 +1,7 @@
 class Bullet extends GameObject{
 
   Bullet(){
-    pos = myShip.pos;
+    pos = myShip.getPos();
     vel = new PVector(0,-10);
   }
   
