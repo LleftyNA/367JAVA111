@@ -1,11 +1,13 @@
 ArrayList<GameObject> engine;
 boolean w, a, s, d, j;
+Ship myShip;
 
 void setup(){
   size(600, 600, FX2D);
   engine = new ArrayList<GameObject>(10000);
   rectMode(CENTER);
-  engine.add(new Ship());
+  myShip = new Ship();
+  engine.add(myShip);
 }
 
 void draw(){

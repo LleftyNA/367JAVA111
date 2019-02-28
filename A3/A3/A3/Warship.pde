@@ -14,16 +14,22 @@ class Ship extends GameObject{
     if (w){
       vel.y = -5;
     }
-        if (a){
+    else if (a){
       vel.x = -5;
     }
-        if (s){
+    else if (s){
       vel.y = 5;
     }
-        if (d){
+    else if (d){
       vel.x = 5;
     }
-    //if (j){}
+    else if (j){
+      engine.add(new Bullet());
+    }
+    else{
+      vel.x =0;
+      vel.y = 0;
+    }
     pos.add(vel);
   }
   
