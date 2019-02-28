@@ -1,17 +1,20 @@
 class Ship extends GameObject{
-
+ 
   Ship(){
+
     pos = new PVector(width/2,height/2);
     vel = new PVector(0,0);
   }
 
   void show(){
+    w = 50;
+    h = 50;
     fill(0, 255, 0);
-    rect(pos.x,pos.y,50,50);
+    rect(pos.x,pos.y,w,h);
   }
   
   void act(){
-    if (w){
+    if (wk){
       vel.y = -5;
     }
     else if (a){

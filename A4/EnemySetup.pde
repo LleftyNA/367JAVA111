@@ -7,8 +7,10 @@ class Launcher extends GameObject{
   }
   
   void show(){
+    w = 100;
+    h = 100;
     fill(100);
-    ellipse(pos.x,pos.y,100,100);
+    ellipse(pos.x,pos.y,w,h);
   }
   
   void act(){
@@ -22,6 +24,9 @@ class Launcher extends GameObject{
     }
      else if (frameCount < 1500){
        randomWave();
+     }
+     else if (frameCount % 800 ==0){
+       engine.add(new Boss(new PVector(pos.x, pos.y)));
      }
   }
   

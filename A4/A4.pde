@@ -1,5 +1,5 @@
 ArrayList<GameObject> engine;
-boolean w, a, s, d, j;
+boolean wk, a, s, d, j;
 Ship myShip;
 
 color lb = #67D4FF;
@@ -34,7 +34,7 @@ void draw(){
 
 void keyPressed(){
   if(key == 'w' || key == 'W'){
-    w = true;
+    wk = true;
   }
   
     if(key == 'a' || key == 'A'){
@@ -56,7 +56,7 @@ void keyPressed(){
 
 void keyReleased(){
     if(key == 'w' || key == 'W'){
-      w = false;
+      wk = false;
   }
   
       if(key == 'a' || key == 'A'){

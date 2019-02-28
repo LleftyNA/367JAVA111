@@ -1,5 +1,4 @@
 class Bullet extends GameObject{
-
   Bullet(){
     pos = myShip.getPos();
     vel = new PVector(0,-10);
@@ -7,8 +6,10 @@ class Bullet extends GameObject{
   }
   
   void show(){
+    w = 5;
+    h = 5;
     fill(255,0,0);
-    rect (pos.x,pos.y,5,5);
+    rect (pos.x,pos.y,w,h);
   }
 
   void act(){

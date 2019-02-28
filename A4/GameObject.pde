@@ -3,6 +3,7 @@ abstract class GameObject {
   PVector vel;
   PVector curpos;
   float hp;
+  float w,h;
   GameObject(){
   
   }
