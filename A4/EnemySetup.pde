@@ -2,7 +2,7 @@ class Launcher extends GameObject{
 
   
   Launcher(){
-    pos = new PVector(width/2,100);
+    pos = new PVector(width/2,-100);
     vel = new PVector(0,0);
   }
   
@@ -21,17 +21,24 @@ class Launcher extends GameObject{
       straightLine(400);
     }
      else if (frameCount < 1500){
-       
+       randomWave();
      }
   }
   
   void straightLine(float incomingX){
     pos.x = incomingX;
-    if (frameCount % 10 == 0){
-      engine.add(new Enemy((pos)));
+    if (frameCount % 100 == 0){
+      engine.add(new Enemy(new PVector(pos.x, pos.y)));
     }
   }
   
+  void randomWave (){
+    pos.x = random(50, width-50);
+    if(frameCount % 50 ==0){
+      engine.add(new Enemy(new PVector(pos.x,pos.y)));
+    
+    }
+  }
   boolean hasDied(){
     return false;
   }
