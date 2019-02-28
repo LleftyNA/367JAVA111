@@ -26,21 +26,21 @@ class Launcher extends GameObject{
        randomWave();
      }
      else if (frameCount % 800 ==0){
-       engine.add(new Boss(new PVector(pos.x, pos.y)));
+       engine.add(new Boss(pos.x, pos.y));
      }
   }
   
   void straightLine(float incomingX){
     pos.x = incomingX;
     if (frameCount % 100 == 0){
-      engine.add(new Enemy(new PVector(pos.x, pos.y)));
+      engine.add(new Enemy(pos.x, pos.y));
     }
   }
   
   void randomWave (){
     pos.x = random(50, width-50);
     if(frameCount % 50 ==0){
-      engine.add(new Enemy(new PVector(pos.x,pos.y)));
+      engine.add(new Enemy(pos.x,pos.y));
     
     }
   }

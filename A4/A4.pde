@@ -2,6 +2,7 @@ ArrayList<GameObject> engine;
 boolean wk, a, s, d, j;
 Ship myShip;
 
+int timer = 0;
 color lb = #67D4FF;
 color db = #2F6A96;
 color or = #EE7036;
@@ -17,6 +18,7 @@ void setup(){
 
 void draw(){
   background(0);
+  timer = timer + 1;
   int i = engine.size()-1;
   // println(i); //Debugger
   while (i>=0){

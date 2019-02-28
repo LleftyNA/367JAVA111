@@ -4,6 +4,7 @@ abstract class GameObject {
   PVector curpos;
   float hp;
   float w,h;
+  float cx,cy;
   GameObject(){
   
   }

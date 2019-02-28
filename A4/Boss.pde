@@ -2,9 +2,9 @@ class Boss extends Enemy{
   
   float horizontalVel = 0;
   
-  Boss(PVector coming){
-    super(coming);
-      pos = coming;
+  Boss(float x, float y){
+      super(x,y);
+      pos = new PVector(x,y);
       vel = new PVector (0,3);
       hp = 7;
   }

@@ -1,8 +1,9 @@
 class Ship extends GameObject{
- 
-  Ship(){
 
-    pos = new PVector(width/2,height/2);
+  Ship(){
+    cx = width/2;
+    cy = height/2;
+    pos = new PVector(cx,cy);
     vel = new PVector(0,0);
   }
 

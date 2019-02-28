@@ -1,6 +1,8 @@
 class Bullet extends GameObject{
   Bullet(){
     pos = myShip.getPos();
+    cx = pos.x;
+    cy = pos.y;
     vel = new PVector(0,-10);
     hp = 1;
   }
@@ -15,6 +17,8 @@ class Bullet extends GameObject{
   void act(){
     pos.add(vel);
   }
+  
+  
 
   boolean hasDied(){
     return pos.y < 0;

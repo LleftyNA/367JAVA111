@@ -1,7 +1,9 @@
 class Enemy extends GameObject{
   
-  Enemy(PVector coming){
-      pos = coming;
+  Enemy(float incomeX, float incomeY){
+      cx = incomeX;
+      cy = incomeY;
+      pos = new PVector (cx,cy);
       vel = new PVector (0,3);
       hp = 3;
   }
@@ -22,8 +24,9 @@ class Enemy extends GameObject{
     if(thing instanceof Bullet){
       if(collision(pos.x,pos.y,w,h,thing.pos.x,thing.pos.y,thing.w,thing.h)){
         hp = hp -1;
-  }
-  }
+    }
+    }
+    i++;
   }
   }
   
