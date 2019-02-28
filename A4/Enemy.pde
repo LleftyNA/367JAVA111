@@ -3,6 +3,7 @@ class Enemy extends GameObject{
   Enemy(PVector coming){
       pos = coming;
       vel = new PVector (0,3);
+      hp = 3;
   }
 
   void show(){
@@ -15,6 +16,6 @@ class Enemy extends GameObject{
   }
   
   boolean hasDied(){
-    return pos.y > height;
+    return pos.y > height || hp <= 0;
   }
 }

@@ -3,6 +3,7 @@ class Bullet extends GameObject{
   Bullet(){
     pos = myShip.getPos();
     vel = new PVector(0,-10);
+    hp = 1;
   }
   
   void show(){
