@@ -15,6 +15,16 @@ class Enemy extends GameObject{
   
   void act(){
     pos.add(vel);
+    
+  int i = 0;
+  while (i < engine.size()){
+    GameObject thing = engine.get(i);
+    if(thing instanceof Bullet){
+      if(collision(pos.x,pos.y,w,h,thing.pos.x,thing.pos.y,thing.w,thing.h)){
+        hp = hp -1;
+  }
+  }
+  }
   }
   
   void update(){
